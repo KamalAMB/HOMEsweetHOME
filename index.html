@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HOMEsweetHOME</title>
   <link rel="stylesheet" href="styles/style.css" />
 </head>
+
 <body>
 
   <!-- HEADER -->
@@ -21,7 +23,7 @@
       </nav>
     </div>
     <div class="hero-image">
-      <!-- Large image full width -->
+      <!-- Image de fond header -->
     </div>
     <form class="search-form">
       <input type="text" placeholder="Localisation" />
@@ -41,15 +43,109 @@
   <main>
     <section class="etapes-location">
       <h2>Comment ça marche ? La location en 4 étapes</h2>
-      <div class="etapes">
-        <div>Trouver un bien</div>
-        <div>Constituer son dossier</div>
-        <div>Signer son contrat</div>
-        <div>Entrer dans les lieux</div>
+      <div class="etapes-grid">
+        <div class="etape">
+          <div class="etape-num">1</div>
+          <h3>Trouver un bien</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+        <div class="etape">
+          <div class="etape-num">2</div>
+          <h3>Constituer son dossier</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+        <div class="etape">
+          <div class="etape-num">3</div>
+          <h3>Signer son contrat</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+        <div class="etape">
+          <div class="etape-num">4</div>
+          <h3>Entrer dans les lieux</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
       </div>
     </section>
 
-    <!-- Ajoutez ici les autres sections : biens, services, témoignages -->
+    <section class="nos-services">
+      <h2>Nos services – Les biens à la location</h2>
+      <div class="biens-galerie">
+        <div class="bien">
+          <a href="bien.html">
+            <img
+              src="https://fastly.picsum.photos/id/308/1536/1024.jpg?hmac=sENdBVMjJ5k40eSlDyPh8CZKbXjOm1S73hukmgfyMKQ"
+              alt="Appartement T2 – Lyon" />
+            <h3>Appartement T2 – Lyon</h3>
+          </a>
+        </div>
+        <div class="bien">
+          <a href="bien.html">
+            <img
+              src="https://fastly.picsum.photos/id/308/1536/1024.jpg?hmac=sENdBVMjJ5k40eSlDyPh8CZKbXjOm1S73hukmgfyMKQ"
+              alt="Maison – Bordeaux" />
+            <h3>Maison – Bordeaux</h3>
+          </a>
+        </div>
+        <div class="bien">
+          <a href="bien.html">
+            <img
+              src="https://fastly.picsum.photos/id/308/1536/1024.jpg?hmac=sENdBVMjJ5k40eSlDyPh8CZKbXjOm1S73hukmgfyMKQ"
+              alt="Studio – Marseille" />
+            <h3>Studio – Marseille</h3>
+          </a>
+        </div>
+        <div class="bien">
+          <a href="bien.html">
+            <img
+              src="https://fastly.picsum.photos/id/308/1536/1024.jpg?hmac=sENdBVMjJ5k40eSlDyPh8CZKbXjOm1S73hukmgfyMKQ"
+              alt="Appartement T3 – Paris" />
+            <h3>Appartement T3 – Paris</h3>
+          </a>
+        </div>
+        <div class="bien">
+          <a href="bien.html">
+            <img
+              src="https://fastly.picsum.photos/id/308/1536/1024.jpg?hmac=sENdBVMjJ5k40eSlDyPh8CZKbXjOm1S73hukmgfyMKQ"
+              alt="Loft – Lille" />
+            <h3>Loft – Lille</h3>
+          </a>
+        </div>
+        <div class="bien">
+          <a href="bien.html">
+            <img
+              src="https://fastly.picsum.photos/id/308/1536/1024.jpg?hmac=sENdBVMjJ5k40eSlDyPh8CZKbXjOm1S73hukmgfyMKQ"
+              alt="Villa – Nice" />
+            <h3>Villa – Nice</h3>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="temoignages">
+      <h2>Votre avis compte – Ils nous ont fait confiance</h2>
+      <div class="temoignages-grid">
+        <div class="avis">
+          <img src="assets/profils/user1.jpg" alt="Marie" class="avatar" />
+          <div class="etoiles">★★★★★</div>
+          <h4>Marie Dupuis</h4>
+          <p>Un service rapide, clair et efficace. Je recommande !</p>
+        </div>
+        <div class="avis">
+          <img src="assets/profils/user2.jpg" alt="Karim" class="avatar" />
+          <div class="etoiles">★★★★☆</div>
+          <h4>Karim Benali</h4>
+          <p>Très satisfait, j’ai trouvé mon appartement en quelques jours.</p>
+        </div>
+        <div class="avis">
+          <img src="assets/profils/user3.jpg" alt="Lucie" class="avatar" />
+          <div class="etoiles">★★★★★</div>
+          <h4>Lucie Martin</h4>
+          <p>Une équipe à l’écoute et un suivi parfait, merci !</p>
+        </div>
+      </div>
+    </section>
+
+
   </main>
 
   <!-- FOOTER -->
@@ -72,7 +168,7 @@
     </div>
   </footer>
 
-  <!-- MODALE CONNEXION -->
+  <!-- CONNEXION -->
   <div id="modal" class="modal hidden">
     <div class="modal-content">
       <span class="close">&times;</span>
@@ -81,7 +177,7 @@
         <input type="password" placeholder="Mot de passe" />
         <button type="submit">Connexion</button>
         <div class="links">
-          <a href="#">Pas encore inscrit ? Cliquez ici</a><br>
+          <a href="#">Pas encore inscrit? Cliquez ici</a><br>
           <a href="#">J’ai oublié mon mot de passe</a>
         </div>
       </form>
@@ -90,4 +186,5 @@
 
   <script src="scripts/main.js"></script>
 </body>
+
 </html>

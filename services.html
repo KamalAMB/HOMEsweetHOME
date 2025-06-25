@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nos services - HOMEsweetHOME</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  < <!-- HEADER -->
+  <header>
+    <div class="container header-container">
+      <img src="assets/logo.png" alt="Logo HOMEsweetHOME" class="logo" />
+      <nav class="nav">
+        <a href="index.html">Accueil</a>
+        <a href="locations.html">Les locations</a>
+        <a href="services.html">Les services</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="#" id="openModal">Connexion</a>
+      </nav>
+    </div>
+    <div class="hero-image">
+      <!-- Image de fond header -->
+    </div>
+    <form class="search-form">
+      <input type="text" placeholder="Localisation" />
+      <select>
+        <option>Type de bien</option>
+        <option>Appartement</option>
+        <option>Maison</option>
+      </select>
+      <input type="number" placeholder="Nb pièces" />
+      <input type="number" placeholder="Nb chambres" />
+      <input type="number" placeholder="Loyer max (€)" />
+      <button type="submit">Rechercher</button>
+    </form>
+  </header>
+
+  <main>
+    <h1>Nos engagements</h1>
+    <section class="collapses">
+      <div class="collapse" data-id="1">
+        <button class="toggle">Fiabilité</button>
+        <div class="content">Lorem ipsum dolor sit amet...</div>
+      </div>
+      <div class="collapse" data-id="2">
+        <button class="toggle">Respect</button>
+        <div class="content">Lorem ipsum dolor sit amet...</div>
+      </div>
+      <div class="collapse" data-id="3">
+        <button class="toggle">Philosophie</button>
+        <div class="content">Lorem ipsum dolor sit amet...</div>
+      </div>
+      <div class="collapse" data-id="4">
+        <button class="toggle">Sécurité</button>
+        <div class="content">Lorem ipsum dolor sit amet...</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-column">
+      <p>Suivez-nous :</p>
+      <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">YouTube</a>
+      <p>HOMEsweetHOME</p>
+    </div>
+    <div class="footer-column">
+      <a href="#">Mentions légales</a>
+      <a href="#">Support</a>
+      <a href="#">Nous contacter</a>
+    </div>
+    <div class="footer-column">
+      <a href="index.html">Accueil</a>
+      <a href="locations.html">Les locations</a>
+      <a href="services.html">Les services</a>
+      <a href="a-propos.html">À propos</a>
+    </div>
+  </footer>
+
+  <!-- CONNEXION -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <form>
+        <input type="text" placeholder="Login" />
+        <input type="password" placeholder="Mot de passe" />
+        <button type="submit">Connexion</button>
+        <div class="links">
+          <a href="#">Pas encore inscrit? Cliquez ici</a><br>
+          <a href="#">J’ai oublié mon mot de passe</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="scripts/collapse.js"></script>
+</body>
+</html>
