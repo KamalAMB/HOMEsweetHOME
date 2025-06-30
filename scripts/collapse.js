@@ -1,23 +1,19 @@
-const toggles = document.querySelectorAll(".toggle");
+document.addEventListener("DOMContentLoaded", () => {
+  const collapses = document.querySelectorAll(".collapse");
 
-toggles.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const currentContent = btn.nextElementSibling;
+  collapses.forEach(collapse => {
+    const header = collapse.querySelector(".collapse-header");
 
-    document.querySelectorAll(".content").forEach((el) => {
-      if (el !== currentContent) {
-        el.style.display = "none";
-      }
+    header.addEventListener("click", () => {
+      // Fermer les autres
+      collapses.forEach(c => {
+        if (c !== collapse) {
+          c.classList.remove("open");
+        }
+      });
+
+      // Toggle celui-ci
+      collapse.classList.toggle("open");
     });
-
-    currentContent.style.display =
-      currentContent.style.display === "block" ? "none" : "block";
-  });
-});
-
-// Tout est fermé par défaut
-window.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".content").forEach((el) => {
-    el.style.display = "none";
   });
 });

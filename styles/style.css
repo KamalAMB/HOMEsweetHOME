@@ -7,10 +7,12 @@
 body {
   font-family: sans-serif;
   line-height: 1.5;
+  background: #f9f9f9;
+  color: #333;
 }
 
 header {
-  background: #f8f8f8;
+  background: #fff;
   padding: 1rem;
 }
 
@@ -29,7 +31,7 @@ header {
 .nav a:hover,
 .footer-column a:hover {
   text-decoration: underline;
-  color: #1d97e9;
+  color: #0077cc;
 }
 
 .hero-image {
@@ -43,7 +45,7 @@ header {
   flex-wrap: wrap;
   gap: 0.5rem;
   padding: 1rem;
-  background: #eee;
+  background: #fff;
 }
 
 .search-form input,
@@ -53,7 +55,23 @@ header {
 }
 
 main {
-  margin: 1rem ;
+  margin: 1rem;
+}
+
+main h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+main h1,
+main h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.nos-services h2 {
+  text-align: center;
+  margin: 2rem 0;
 }
 
 .etapes-grid {
@@ -110,10 +128,11 @@ footer {
 
 .modal {
   position: fixed;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -144,7 +163,7 @@ footer {
 .bien {
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   padding: 0.5rem;
   font-size: 0.9rem;
@@ -183,7 +202,7 @@ footer {
   background: #fff;
   padding: 1rem;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .avis,
@@ -287,6 +306,86 @@ footer {
   margin-bottom: 0.5rem;
 }
 
+.collapses {
+  margin: 2rem auto;
+  max-width: 800px;
+}
+
+.collapse {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background: #f9f9f9;
+}
+
+.collapse-header {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  text-align: left;
+  padding: 1rem;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.collapse-header:hover {
+  background: #ececec;
+}
+
+.collapse-icon {
+  transition: transform 0.3s ease;
+}
+
+.collapse-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0 1rem;
+}
+
+.collapse.open .collapse-content {
+  max-height: 500px;
+  /* assez grand pour ton texte */
+  padding: 1rem;
+}
+
+.collapse.open .collapse-icon {
+  transform: rotate(45deg);
+  /* transforme + en × */
+}
+
+/* A propos section */
+.a-propos h1 {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.apropos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.apropos-container img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.apropos-text {
+  max-width: 700px;
+  text-align: left;
+}
+
 @media screen and (min-width: 768px) {
   .etapes-grid {
     grid-template-columns: 1fr 1fr;
@@ -299,14 +398,19 @@ footer {
   .temoignages-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-  
+
+  .apropos-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
 }
 
 @media screen and (min-width: 1200px) {
   .etapes-grid {
     grid-template-columns: repeat(4, 1fr);
   }
-  
+
   .biens-galerie {
     grid-template-columns: repeat(3, 1fr);
   }
