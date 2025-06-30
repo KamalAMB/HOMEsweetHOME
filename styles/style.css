@@ -16,6 +16,12 @@ header {
   padding: 1rem;
 }
 
+.logo {
+  height: 60px;
+  width: auto;
+}
+
+
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -34,10 +40,17 @@ header {
   color: #0077cc;
 }
 
-.hero-image {
+.hero-image img.header {
   width: 100%;
   height: 200px;
-  background: lightgray url('../assets/img/hero.jpg') center/cover no-repeat;
+  display: block;
+  border-radius: 12px;
+  object-fit: cover;
+
+}
+
+.hero-image img.header:hover {
+  filter: brightness(0.95);
 }
 
 .search-form {
@@ -58,15 +71,24 @@ main {
   margin: 1rem;
 }
 
-main h1 {
-  text-align: center;
-  margin-bottom: 2rem;
+main>h1,
+.loueur,
+.description,
+.equipements {
+  max-width: 800px;
+  margin: 1rem auto;
+  padding: 0 1rem;
 }
 
 main h1,
 main h2 {
   text-align: center;
   margin-bottom: 2rem;
+}
+
+.description {
+  text-align: left;
+  line-height: 1.6;
 }
 
 .nos-services h2 {
@@ -184,6 +206,15 @@ footer {
 
 .bien:hover img {
   transform: scale(1.03);
+}
+
+.bien-detail {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  max-width: 800px;
+  margin: 2rem auto;
 }
 
 .temoignages {
@@ -366,6 +397,14 @@ footer {
   margin: 2rem 0;
 }
 
+.apropos-container img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
 .apropos-container {
   display: flex;
   flex-direction: column;
@@ -377,7 +416,10 @@ footer {
 }
 
 .apropos-container img {
-  max-width: 100%;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
   border-radius: 8px;
 }
 
@@ -386,7 +428,18 @@ footer {
   text-align: left;
 }
 
+@media (max-width: 600px) {
+  .equipements {
+    columns: 1;
+  }
+}
+
 @media screen and (min-width: 768px) {
+
+  .logo {
+    height: 70px;
+  }
+
   .etapes-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -403,6 +456,17 @@ footer {
     flex-direction: row;
     align-items: flex-start;
   }
+
+  .apropos-container img {
+    flex: 0 0 350px;
+    max-width: 350px;
+    margin-right: 2rem;
+  }
+
+  .apropos-text {
+    flex: 1;
+  }
+
 
 }
 

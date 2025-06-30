@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Studio – Marseille - HOMEsweetHOME</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<body>
+
+  <header>
+    <div class="container header-container">
+      <img src="assets/logo.png" alt="Logo HOMEsweetHOME" class="logo" />
+      <nav class="nav">
+        <a href="index.html">Accueil</a>
+        <a href="locations.html">Les locations</a>
+        <a href="services.html">Les services</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="#" id="openModal">Connexion</a>
+      </nav>
+    </div>
+    <div class="hero-image"></div>
+    <form class="search-form">
+      <input type="text" placeholder="Localisation" />
+      <select>
+        <option>Type de bien</option>
+        <option>Appartement</option>
+        <option>Maison</option>
+      </select>
+      <input type="number" placeholder="Nb pièces" />
+      <input type="number" placeholder="Nb chambres" />
+      <input type="number" placeholder="Loyer max (€)" />
+      <button type="submit">Rechercher</button>
+    </form>
+  </header>
+
+  <main>
+    <section class="carousel">
+      <button id="prevBtn" class="carousel-btn">‹</button>
+      <div class="carousel-container" data-images="assets/img/bien3.jpg,assets/img/bien3b.jpg">
+        <img id="carouselImage" src="assets/img/bien3.jpg" alt="Studio à Marseille" />
+      </div>
+      <button id="nextBtn" class="carousel-btn">›</button>
+    </section>
+
+    <div class="bien-detail">
+      <h1>Studio – Marseille</h1>
+      <div class="loueur">
+        <img src="assets/profils/user3.jpg" class="round" alt="Paul Durand" />
+        <div>
+          <strong>Paul Durand</strong><br>
+          <span class="etoiles">★★★★☆</span>
+        </div>
+      </div>
+      <p class="description">
+        Studio cosy idéalement situé dans le centre historique de Marseille, proche du Vieux-Port.
+      </p>
+
+      <h2>Équipements</h2>
+      <ul class="equipements">
+        <li>Wi-Fi</li>
+        <li>Climatisation</li>
+        <li>Kitchenette</li>
+        <li>TV écran plat</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-column">
+      <p>Suivez-nous :</p>
+      <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">YouTube</a>
+      <p>HOMEsweetHOME</p>
+    </div>
+    <div class="footer-column">
+      <a href="#">Mentions légales</a>
+      <a href="#">Support</a>
+      <a href="#">Nous contacter</a>
+    </div>
+    <div class="footer-column">
+      <a href="index.html">Accueil</a>
+      <a href="locations.html">Les locations</a>
+      <a href="services.html">Les services</a>
+      <a href="a-propos.html">À propos</a>
+    </div>
+  </footer>
+
+  <script src="scripts/carousel.js"></script>
+</body>
+
+</html>
