@@ -155,11 +155,6 @@ main h1 {
   margin-bottom: 1rem;
 }
 
-main > h1 + .collapse {
-  margin-top: 0;
-}
-
-
 main h1,
 main h2,
 section h2 {
@@ -495,7 +490,7 @@ footer {
   top: 0; left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.6); /* fond sombre */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -510,6 +505,74 @@ footer {
   max-width: 400px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
   position: relative;
+  animation: popup 0.3s ease; /* petite anim d'apparition */
+}
+
+/* petite animation de scale */
+@keyframes popup {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.modal-content input:focus {
+  border-color: #1d97e9;
+  box-shadow: 0 0 5px rgba(29, 151, 233, 0.3);
+  outline: none;
+}
+
+.modal-content button {
+  width: 100%;
+  padding: 0.7rem;
+  background: #1d97e9;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.modal-content button:hover {
+  background: #146cae;
+}
+
+.modal-content .links {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.modal-content .links a {
+  color: #1d97e9;
+  text-decoration: none;
+}
+
+.modal-content .links a:hover {
+  text-decoration: underline;
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #444;
 }
 
 /* ===========================
@@ -518,7 +581,7 @@ footer {
 @media screen and (min-width: 768px) {
   .logo { height: 70px; }
   .burger { display: none; }
-  .nav { display: flex !important; flex-direction: row; position: static; background: none; gap: 1rem; box-shadow: none; padding: 0; }
+  .nav { display: flex ; flex-direction: row; position: static; background: none; gap: 1rem; box-shadow: none; padding: 0; }
   .etapes-grid { grid-template-columns: 1fr 1fr; }
   .biens-galerie { grid-template-columns: repeat(2,1fr); }
   .temoignages-grid { grid-template-columns: repeat(3,1fr); }
